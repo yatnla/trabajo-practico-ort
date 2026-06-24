@@ -1,0 +1,26 @@
+Datos del equipo:
+
+- Nataly Cotrina Rios
+
+
+
+Imágenes:
+
+- del Infinito (https://www.delinfinito.com/)
+- Moria Galeria (https://moriagaleria.com/)
+- Santiago Paredes (https://santiagoparedes.work/producto/interior-print/)
+- Village Book Store (https://villagebooks.co/)
+- Halcyon Gallery (https://www.halcyongallery.com/news/176-david-hockney-s-ipad-drawings-five-things-to-know/)
+
+
+
+Plugins:
+
+- FancyApps (https://fancyapps.com/carousel/plugins/thumbs/)
+- Animate.css v4 (https://animate.style/)
+
+
+
+Icons:
+
+- yesicon (https://yesicon.app/)

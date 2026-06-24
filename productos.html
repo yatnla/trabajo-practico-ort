@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Colección Oryon | Tienda</title>
+
+    <link rel="shortcut icon" type="image/png" href="/assets/img/logo.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/assets/styles.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ubv1iwy.css">
+
+    <script src="/vendors/jquery-4.0.0.min.js"></script>
+    <script src="/assets/js/productos.js"></script>
+    <link rel="stylesheet" href="vendors/jquery.smartCart/css/smart_cart.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-oryon">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="/assets/img/logo-blanco.png" alt="COLECCIÓN ORYON" class="navbar-logo"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navOryon" aria-controls="navOryon" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navOryon">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="exhibiciones.html">Exhibiciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link btn-tienda" href="productos.html">Tienda</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="tienda-banner">
+        <img src="/assets/img/tienda-banner.jpg" alt="Interior de la tienda Colección Oryon">
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="tienda-titulo mb-4">Catálogo de Productos</h2>
+                <div id="grillaProductos" class="row g-4"></div>
+            </div>
+            
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div id="smartcart"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-oryon">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <a href="index.html"><img src="/assets/img/logo-azul.png" alt="COLECCIÓN ORYON" class="navbar-logo"></a>
+                    <p class="footer-copy">© 2026. Nataly Cotrina Rios — Desarrollo II & Programación I</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <p><a href="exhibiciones.html">Exhibiciones</a></p>
+                            <p><a href="productos.html">Tienda</a></p>
+                        </div>
+                        <div class="col-6">
+                            <p><a href="about.html">Nosotros</a></p>
+                            <p><a href="contacto.html">Contacto</a></p>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="footer-redes">
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-red-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                </a>
+                                <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="footer-red-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                </a>
+                                <a href="https://www.behance.net/" target="_blank" rel="noopener" aria-label="Behance" class="footer-red-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M19.58 12.27c-.04-.62-.25-1.09-.62-1.41c-.37-.32-.83-.48-1.38-.48c-.58 0-1.08.17-1.39.51c-.33.34-.54.8-.62 1.38m6.35-.23c.08.41.08 1 .08 1.77h-6.5c.05.9.35 1.52.94 1.88c.35.23.78.34 1.29.34c.53 0 .96-.14 1.27-.41c.2-.15.36-.35.5-.62h2.38c-.06.54-.35 1.07-.88 1.62c-.78.88-1.9 1.3-3.34 1.3c-1.19 0-2.23-.37-3.16-1.1c-.88-.73-1.34-1.92-1.34-3.57c0-1.55.41-2.75 1.23-3.55c.82-.83 1.88-1.24 3.19-1.24c.77 0 1.47.14 2.09.42c.62.28 1.14.71 1.54 1.32c.37.53.6 1.14.71 1.84M9.58 14.07c0-.65-.27-1.1-.79-1.34c-.29-.13-.71-.2-1.25-.23H4.87v3.34H7.5c.54 0 .96-.07 1.26-.22c.55-.27.82-.79.82-1.55m-4.71-3.61H7.5c.54 0 1-.1 1.32-.31c.34-.2.5-.57.5-1.09c0-.56-.22-.96-.66-1.15c-.39-.13-.88-.19-1.47-.19H4.87m6.85 4.7c.32.5.48 1.11.48 1.82c0 .76-.2 1.4-.55 1.99a3.6 3.6 0 0 1-.88.98c-.4.29-.87.51-1.41.62c-.54.11-1.12.17-1.75.17H2V5.55h6c1.53.03 2.6.45 3.23 1.33c.38.53.57 1.16.57 1.9c0 .76-.19 1.37-.57 1.83c-.23.26-.53.5-.95.71c.63.23 1.11.6 1.44 1.1m8.34-5.1h-5.01V6.07h5.01v1.25z" fill="currentColor"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+<script src="vendors/jquery.smartCart/js/jquery.smartCart.min.js"></script>
+
+<script>
+
+    function catalogo() {
+        var listaProductos = '';
+        for (let i = 0; i < productos.length; i++) {
+            listaProductos += 
+            '<div class="col-md-6 col-12">' +
+                '<div class="sc-product-item card h-100 p-3 shadow-sm">' +
+                    '<img class="img-fluid mb-3" data-name="product_image" src="assets/img/productos/' + productos[i].img + '" alt="'+ productos[i].nombre +'">' +
+                    '<h4 data-name="product_name">'+ productos[i].nombre +'</h4>' +
+                    '<p data-name="product_desc" class="text-muted">'+ productos[i].desc +'</p>' +
+                    '<p class="fw-bold">$' + productos[i].precio.toLocaleString('es-AR') + '</p>' +
+                    '<input name="product_id" value="'+ productos[i].id + '" type="hidden">' +
+                    '<input name="product_price" value="'+ productos[i].precio + '" type="hidden">' +
+                    '<button class="sc-add-to-cart btn btn-success mt-auto">Añadir al carrito</button>' +
+                '</div>' +
+            '</div>';
+        }
+        return listaProductos;
+    }
+
+    let listadoCatalogo = catalogo();
+
+    $(document).ready(function () {
+
+        $('#grillaProductos').html(listadoCatalogo); 
+
+        $('#smartcart').smartCart({
+
+            lang: {
+
+                cartTitle: "Mi Carrito:",
+
+                checkout: 'Pagar',
+
+                clear: 'Borrar',
+
+                subtotal: 'Subtotal:',
+
+                cartRemove: '×',
+
+                cartEmpty: 'Nada todavía...<br />¡Adquirí un libro!'
+
+            }
+        });
+    });
+
+
+
+</script>
+
+</body>
+</html>
