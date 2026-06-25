@@ -657,6 +657,9 @@ img {
     width: 100%;
 }
 
+.floating-wpp {
+    z-index: 4000;
+}
 /* responsive */
 
 @media (min-width: 768px) {

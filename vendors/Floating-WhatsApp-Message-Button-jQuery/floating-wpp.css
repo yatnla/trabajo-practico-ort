@@ -1,6 +1,6 @@
 .floating-wpp {
     position: fixed;
-    z-index: 1900;
+    z-index: 4000;
     bottom: 15px;
     left: 15px;
     font-size: 14px;
