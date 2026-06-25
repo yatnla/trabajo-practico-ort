@@ -15,10 +15,14 @@
 
     <script src="/vendors/jquery-4.0.0.min.js"></script>
     <script src="/assets/js/productos.js"></script>
+
     <link rel="stylesheet" href="vendors/jquery.smartCart/css/smart_cart.min.css">
 
+    <link rel="stylesheet" href="vendors/Floating-WhatsApp-Message-Button-jQuery/floating-wpp.min.css">
 </head>
 <body>
+
+    <div class="floating-wpp"></div>
 
     <nav class="navbar navbar-expand-lg navbar-oryon">
         <div class="container">
@@ -96,6 +100,8 @@
 
 <script src="vendors/jquery.smartCart/js/jquery.smartCart.min.js"></script>
 
+<script src="vendors/Floating-WhatsApp-Message-Button-jQuery/floating-wpp.min.js"></script>
+
 <script>
 
     function catalogo() {
@@ -121,17 +127,48 @@
 
     $(document).ready(function () {
 
-        $('#grillaProductos').html(listadoCatalogo); 
+        $('#grillaProductos').html(listadoCatalogo);
+        $('.floating-wpp').floatingWhatsApp({
+            phone: '5491100000000',
+            popupMessage: '¿Tenés dudas o querés hacer tu pedido?',
+            showPopup: true,
+            message: '¡Hola! Me gustaría hacer una consulta sobre la tienda.',
+            headerTitle: 'Colección Oryon'
+        });
+
+        
+        function armarMensajePedido(carrito) {
+            if (!carrito || carrito.length === 0) {
+                return '¡Hola! Quisiera hacer una consulta sobre la tienda de la galería.';
+            }
+
+            var texto = '¡Hola! Quiero hacer este pedido:\n';
+            carrito.forEach(function (item) {
+                var cantidad = item.product_quantity || 1;
+                texto += '- ' + item.product_name + ' (x' + cantidad + ')\n';
+            });
+            texto += '¿Me confirman si hay stock y cómo lo puedo pagar?';
+            return texto;
+        }
+
+        $('#smartcart').on('click', '.sc-cart-checkout', function (e) {
+            e.preventDefault();
+            var carritoActual = JSON.parse($('#cart_list').val() || '[]');
+            var mensaje = armarMensajePedido(carritoActual);
+            var numeroWhatsapp = '5491100000000';
+            var url = 'https://wa.me/' + numeroWhatsapp + '?text=' + encodeURIComponent(mensaje);
+            window.open(url, '_blank');
+        });
 
         $('#smartcart').smartCart({
 
             lang: {
 
-                cartTitle: "Mi Carrito:",
+                cartTitle: "Mi chango",
 
                 checkout: 'Pagar',
 
-                clear: 'Borrar',
+                clear: 'Vaciar',
 
                 subtotal: 'Subtotal:',
 
@@ -142,8 +179,6 @@
             }
         });
     });
-
-
 
 </script>
 

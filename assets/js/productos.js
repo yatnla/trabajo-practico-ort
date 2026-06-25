@@ -54,5 +54,19 @@ const productos = [
         desc: "Rosie Marks, 2024",
         precio: 27000,
         img: "mount-nelson.webp"
+    },
+    {
+        id: 9,
+        nombre: "Momentarily Sacred",
+        desc: "Rosie Pope, 2025",
+        precio: 30500,
+        img: "momentarily-sacred.webp"
+    },
+    {
+        id: 10,
+        nombre: "This Much is True",
+        desc: "Albert Elm, 2026",
+        precio: 26500,
+        img: "this-much-is-true.webp"
     }
 ];

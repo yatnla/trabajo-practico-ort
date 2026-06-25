@@ -269,6 +269,25 @@ img {
     height: 380px;
 }
 
+.productos-destacados {
+    padding: 2rem 0 3.8rem;
+}
+
+.producto-card {
+    border: none;
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+}
+
+.producto-card .card-img-top {
+    height: 260px;
+    object-fit: cover;
+}
+
+.producto-card .card-title {
+    color: var(--color-violeta);
+}
+
 .testimonios {
     padding: 2rem 0 4rem;
     text-align: center;
@@ -628,7 +647,7 @@ img {
 
 .tienda-titulo {
     color: var(--color-violeta);
-    font-size: 1.1rem;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
     margin-bottom: 1.5rem;
 }
 
