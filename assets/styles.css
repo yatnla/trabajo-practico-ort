@@ -327,7 +327,7 @@ img {
 
 .footer-oryon .footer-copy {
     color: #6b6b6b;
-    font-size: 0.85rem;
+    font-size: 0.80rem;
     margin-top: 0.5rem;
 }
 
@@ -653,6 +653,10 @@ img {
     .equipo-card {
         width: 100%;
         margin: 0 auto;
+    }
+
+    .contacto-seccion .row {
+        --bs-gutter-x: 0;
     }
 }
 
